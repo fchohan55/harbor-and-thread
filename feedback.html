@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback | Harbor & Thread</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="feedback-page">
+  <div class="announcement">We value your experience • Harbor & Thread customer feedback</div>
+
+  <header class="topbar">
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a class="brand" href="index.html" aria-label="Harbor and Thread Home">
+      <span class="brand-mark">H&T</span>
+      <span>
+        <strong>Harbor & Thread</strong>
+        <small>Boston, USA</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#footwear">Footwear</a>
+      <a href="lookbook.html">Lookbook</a>
+      <a href="experience.html">Experience</a>
+      <a href="heritage.html">Heritage</a>
+      <a href="account.html">Account</a>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="header-feedback-btn" data-action="open-feedback">Feedback</button>
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="Search fashion..." aria-label="Search products">
+        <button id="searchBtn" aria-label="Search" type="button">⌕</button>
+      </div>
+      <a href="experience.html#reviews" class="icon-btn" title="Customer Reviews" aria-label="Customer Reviews">💬</a>
+      <a href="index.html#shop" class="icon-btn" title="Shop Collection" aria-label="Shop Collection">🛍</a>
+      <a href="account.html" class="icon-btn" title="Customer Account" aria-label="Customer Account">👤</a>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar" aria-hidden="true" aria-label="Mobile Navigation">
+    <div class="sidebar-head">
+      <strong>Explore</strong>
+      <button id="closeSidebar" aria-label="Close navigation menu" type="button">×</button>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="index.html#footwear">Footwear</a>
+    <a href="lookbook.html">Lookbook</a>
+    <a href="experience.html">Experience</a>
+    <a href="heritage.html">The Atelier &amp; Heritage</a>
+    <a href="account.html">Account</a>
+    <button type="button" class="sidebar-feedback" data-action="open-feedback" style="background:none;border:none;width:100%;text-align:left;padding:14px 0;font-size:15px;cursor:pointer;">Feedback ✦</button>
+    <a href="index.html#shop">Trending Now</a>
+    <div class="sidebar-note">
+      Contemporary fashion inspired by Boston brownstone streets and coastal New England life.
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <main class="feedback-main">
+    <section class="feedback-intro">
+      <p class="eyebrow">Customer Feedback</p>
+      <h1>Share your experience<br>with Harbor &amp; Thread.</h1>
+      <p>
+        Tell us what you think about our collections, fit, fabric quality, and Boston styling.
+        Required fields are marked with an asterisk.
+      </p>
+
+      <div class="feedback-highlights">
+        <div><span>✓</span> Direct to Boston team</div>
+        <div><span>✓</span> 1–5 Star Rating</div>
+        <div><span>✓</span> Live Real-Time Community Stream</div>
+      </div>
+    </section>
+
+    <section class="form-card" id="feedback-form-section">
+      <form id="feedbackForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Name *</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" required minlength="2" autocomplete="name">
+            <small>Minimum 2 characters</small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email (optional)</label>
+            <input id="email" name="email" type="email" placeholder="name@example.com" autocomplete="email">
+            <small>Leave blank or provide your email</small>
+          </div>
+
+          <div class="field">
+            <label for="feedback_type">Feedback Type *</label>
+            <select id="feedback_type" name="feedback_type" required>
+              <option value="">Select feedback type</option>
+              <option value="General">General</option>
+              <option value="Website Experience">Website Experience</option>
+              <option value="Products">Products</option>
+              <option value="Lookbook">Lookbook</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="rating">Rating *</label>
+            <select id="rating" name="rating" required>
+              <option value="">Select rating (1–5)</option>
+              <option value="5">★★★★★ (5 - Excellent)</option>
+              <option value="4">★★★★☆ (4 - Very Good)</option>
+              <option value="3">★★★☆☆ (3 - Good)</option>
+              <option value="2">★★☆☆☆ (2 - Fair)</option>
+              <option value="1">★☆☆☆☆ (1 - Poor)</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell us about your experience, product fit, fabric quality, or styling..." required minlength="3"></textarea>
+            <small id="messageHelp">Minimum 3 characters required.</small>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="reset" class="btn secondary">Clear Form</button>
+          <button type="submit" class="btn primary form-submit" id="submitBtn">Submit Feedback</button>
+        </div>
+
+        <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+
+        <div class="pagination" aria-label="Page navigation" style="margin-top: 36px;">
+          <button class="page-btn" data-page="prev" title="Page 3: Experience" aria-label="Previous page">←</button>
+          <button class="page-btn" data-page="1" title="Page 1: Home">1</button>
+          <button class="page-btn" data-page="2" title="Page 2: Lookbook">2</button>
+          <button class="page-btn" data-page="3" title="Page 3: Experience">3</button>
+          <button class="page-btn" data-page="4" title="Page 4: Heritage">4</button>
+          <button class="page-btn" data-page="next" title="Page 4: Heritage" aria-label="Next page">→</button>
+        </div>
+      </form>
+  </main>
+
+  <!-- Live Customer Feedback Stream (Real-Time) -->
+  <section class="live-feedback-section" id="liveFeedbackSection">
+    <div class="live-feedback-container">
+      <div class="live-header-wrap">
+        <div>
+          <span class="live-pill pulsing"><span class="pulse-dot"></span> Real-Time Feed</span>
+          <h2>Live Customer Voices</h2>
+          <p style="color: var(--color-muted); font-size: 14px; margin: 8px 0 0;">
+            Authentic ratings and stories streamed live directly from our Boston community.
+          </p>
+        </div>
+        <div class="tooltip-wrap">
+          <button class="tooltip-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-describedby="tooltip-live-info">Live Stream Status ⓘ</button>
+          <div class="tooltip-box" id="tooltip-live-info" role="tooltip">Submissions appear here instantly in real-time as customers share their feedback.</div>
+        </div>
+      </div>
+
+      <div class="feedback-stats-row">
+        <div class="feedback-stat-group">
+          <div class="stat-highlight">
+            <span class="stat-number" id="liveRatingAvg">4.9</span>
+            <span class="stars" style="font-size: 14px;">★★★★★</span>
+          </div>
+          <span class="stat-label" id="liveCountLabel">Loading verified customer reviews...</span>
+        </div>
+
+        <div class="feedback-filters" id="feedbackFilters" role="tablist" aria-label="Feedback category filters">
+          <button class="filter-chip active" data-filter="all" role="tab" aria-selected="true">All Feedback</button>
+          <button class="filter-chip" data-filter="5" role="tab" aria-selected="false">5 Stars ★</button>
+          <button class="filter-chip" data-filter="Products" role="tab" aria-selected="false">Products</button>
+          <button class="filter-chip" data-filter="Website Experience" role="tab" aria-selected="false">Website Experience</button>
+          <button class="filter-chip" data-filter="Lookbook" role="tab" aria-selected="false">Lookbook</button>
+          <button class="filter-chip" data-filter="General" role="tab" aria-selected="false">General</button>
+        </div>
+      </div>
+
+      <!-- Feedback Carousel -->
+      <div class="feedback-carousel-wrapper" id="feedbackCarouselWrapper">
+        <div class="carousel-control-row">
+          <div class="carousel-indicators-info">
+            <span class="carousel-counter-badge" id="carouselCounterBadge">Slide 1 of 4</span>
+            <span class="carousel-swipe-hint">Swipe or use arrows ‹ › to browse</span>
+          </div>
+          <div class="carousel-nav-buttons">
+            <button type="button" class="carousel-nav-btn prev-btn" id="feedbackCarouselPrev" aria-label="Previous customer feedback slide" title="Previous feedback">‹</button>
+            <button type="button" class="carousel-nav-btn next-btn" id="feedbackCarouselNext" aria-label="Next customer feedback slide" title="Next feedback">›</button>
+          </div>
+        </div>
+
+        <div class="feedback-carousel-track" id="liveFeedbackGrid" role="region" aria-roledescription="carousel" aria-label="Customer feedback carousel" tabindex="0">
+          <div class="live-feedback-loading" id="liveFeedbackLoading">
+            <div class="pulse-dot" style="margin: 0 auto 12px;"></div>
+            <p>Connecting to real-time customer feed...</p>
+          </div>
+        </div>
+
+        <div class="carousel-dots-wrap" id="feedbackCarouselDots" role="tablist" aria-label="Feedback slide navigation"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Harbor & Thread</div>
+        <p>Contemporary clothing and accessories inspired by Boston life.</p>
+        <p class="address">Boston, Massachusetts, USA</p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="experience.html">Experience</a>
+        <a href="heritage.html">The Atelier &amp; Heritage</a>
+        <a href="account.html">Account</a>
+        <a href="index.html#shop">Trending Now</a>
+      </div>
+
+      <div>
+        <h4>Customer Care</h4>
+        <a href="#feedback-form-section">Leave Feedback</a>
+        <a href="account.html">Customer Account</a>
+        <a href="experience.html#help">Styling &amp; Care</a>
+        <a href="experience.html#help">Shipping &amp; Returns</a>
+        <a href="experience.html#help">Shopping Guide</a>
+      </div>
+
+      <div>
+        <h4>Stay in the loop</h4>
+        <p>Style notes, Boston edits, and seasonal drops.</p>
+        <form class="newsletter" novalidate>
+          <input type="email" placeholder="Email address" required aria-label="Newsletter email">
+          <button type="submit">Join</button>
+        </form>
+        <div class="newsletter-message" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Harbor & Thread. All rights reserved.</span>
+      <span>Boston, USA</span>
+    </div>
+  </footer>
+
+  <!-- Supabase Client & Feedback Integration -->
+  <script>try{localStorage.removeItem('harbor_live_feedback_submissions');sessionStorage.removeItem('harbor_live_feedback_submissions');}catch(e){}</script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/email-preview.js"></script>
+  <script src="js/feedback-drawer.js"></script>
+  <script src="js/newsletter.js"></script>
+  <script src="js/feedback.js?v=20261009-final"></script>
+  <script src="script.js"></script>
+</body>
+</html>

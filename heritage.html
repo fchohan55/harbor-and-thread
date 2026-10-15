@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Boston Atelier &amp; Heritage | Harbor &amp; Thread</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">
+    The Boston Atelier • Handcrafted Tailoring &amp; New England Heritage Since 1984
+  </div>
+
+  <header class="topbar">
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a class="brand" href="index.html" aria-label="Harbor and Thread Home">
+      <span class="brand-mark">H&T</span>
+      <span>
+        <strong>Harbor &amp; Thread</strong>
+        <small>Boston, USA</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#footwear">Footwear</a>
+      <a href="lookbook.html">Lookbook</a>
+      <a href="experience.html">Experience</a>
+      <a href="heritage.html" class="nav-active" aria-current="page">Heritage</a>
+      <a href="account.html">Account</a>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="header-feedback-btn" data-action="open-feedback">Feedback</button>
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="Search heritage, fabrics..." aria-label="Search products">
+        <button id="searchBtn" aria-label="Search" type="button">⌕</button>
+      </div>
+      <a href="experience.html#reviews" class="icon-btn" title="Customer Reviews" aria-label="Customer Reviews">💬</a>
+      <a href="index.html#shop" class="icon-btn" title="Shop Collection" aria-label="Shop Collection">🛍</a>
+      <a href="account.html" class="icon-btn" title="Customer Account" aria-label="Customer Account">👤</a>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar" aria-hidden="true" aria-label="Mobile Navigation">
+    <div class="sidebar-head">
+      <strong>Explore</strong>
+      <button id="closeSidebar" aria-label="Close navigation menu" type="button">×</button>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="index.html#footwear">Footwear (Shoes &amp; Boots)</a>
+    <a href="lookbook.html">Lookbook</a>
+    <a href="experience.html">Experience</a>
+    <a href="heritage.html" class="nav-active" aria-current="page">The Atelier &amp; Heritage</a>
+    <a href="account.html">Account</a>
+    <button type="button" class="sidebar-feedback" data-action="open-feedback" style="background:none;border:none;width:100%;text-align:left;padding:14px 0;font-size:15px;cursor:pointer;">Feedback ✦</button>
+    <a href="index.html#shop">Trending Now</a>
+    <div class="sidebar-note">
+      Contemporary fashion inspired by Boston brownstone streets, maritime salt air, and enduring craftsmanship.
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <main>
+    <!-- Page 4 Hero -->
+    <section class="heritage-hero">
+      <div class="heritage-hero-content">
+        <p class="eyebrow" style="color: #e6c7a9;">Page 4 • The Boston Atelier</p>
+        <h1>Heritage of the Harbor.<br><em>Mastered in Boston.</em></h1>
+        <p>
+          For over four decades, Harbor &amp; Thread has bridged the raw coastal climate of New England with the exacting discipline of European bespoke tailoring. Every stitch honors the historic brickwork of Beacon Hill, maritime-grade wools, and ethical craftsmanship.
+        </p>
+
+        <div class="heritage-stats">
+          <div class="stat-item">
+            <strong>1984</strong>
+            <span>Established in Boston</span>
+          </div>
+          <div class="stat-item">
+            <strong>100%</strong>
+            <span>Traceable Natural Wools</span>
+          </div>
+          <div class="stat-item">
+            <strong>Lifetime</strong>
+            <span>Complimentary Garment Care</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: The Beacon Hill Workshop -->
+    <section class="atelier-craft-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Our Philosophy</p>
+          <h2>The Anatomy of New England Craft</h2>
+        </div>
+        <p style="color: var(--color-muted); max-width: 480px; font-size: 13.5px; line-height: 1.6;">
+          We believe luxury should be tactile, enduring, and resilient against coastal sea mist and brisk winter gusts.
+        </p>
+      </div>
+
+      <div class="artisan-grid">
+        <article class="artisan-card">
+          <div class="artisan-num">01</div>
+          <h3>Architectural Tailoring</h3>
+          <p>
+            Inspired by Back Bay’s Victorian brownstones, our silhouettes blend relaxed structure with clean vertical lines. Garments drape naturally while allowing effortless movement through city streets.
+          </p>
+        </article>
+
+        <article class="artisan-card">
+          <div class="artisan-num">02</div>
+          <h3>Full-Canvas Construction</h3>
+          <p>
+            Unlike mass-produced fused jackets, our outerwear employs floating horsehair canvas interlinings that mold to your posture over time, creating a bespoke fit that only improves with age.
+          </p>
+        </article>
+
+        <article class="artisan-card">
+          <div class="artisan-num">03</div>
+          <h3>Lifetime Restoration</h3>
+          <p>
+            Every Harbor &amp; Thread coat, knit, and leather bag carries our Boston atelier warranty. Bring your piece to our Newbury Street studio for complimentary button replacement, seam reinforcement, or conditioning.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section: Materials of Distinction -->
+    <section class="materials-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Pure Provenance</p>
+          <h2>Materials of Distinction</h2>
+        </div>
+      </div>
+
+      <div class="materials-grid">
+        <div class="material-card">
+          <span class="mat-tag">Outerwear</span>
+          <h4>Double-Faced Wool</h4>
+          <p>
+            24 oz New England melange wool woven from fine sheep's fleece. Dense, naturally wind-resistant, and water-repellent without chemical coatings.
+          </p>
+        </div>
+
+        <div class="material-card">
+          <span class="mat-tag">Accessories &amp; Footwear</span>
+          <h4>Tuscan Vachetta Leather</h4>
+          <p>
+            Vegetable-tanned full-grain calfskin from Santa Croce sull'Arno, Italy. Tanned using chestnut tannins for rich, warm depth that patinas beautifully.
+          </p>
+        </div>
+
+        <div class="material-card">
+          <span class="mat-tag">Knitwear</span>
+          <h4>Peruvian Pima Cotton</h4>
+          <p>
+            Extra-long staple waffle knit combed by hand. Twice as strong as standard cotton, pill-resistant, and silky soft against bare skin.
+          </p>
+        </div>
+
+        <div class="material-card">
+          <span class="mat-tag">Denim</span>
+          <h4>Japanese Selvedge</h4>
+          <p>
+            Shuttle-loomed 13.5 oz denim from Okayama, Japan. Crafted with vintage Toyoda looms and dyed with natural indigo for distinct fade patterns.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: The Heritage Timeline -->
+    <section class="timeline-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Forty Years in Boston</p>
+          <h2>The Harbor Timeline</h2>
+        </div>
+      </div>
+
+      <div class="heritage-timeline">
+        <div class="timeline-milestone">
+          <div class="year">1984</div>
+          <h4>The Boston Harbor Docks</h4>
+          <p>
+            Founded by a former merchant mariner tailor creating bespoke heavy wool watch coats for Boston harbor pilots and dockmasters.
+          </p>
+        </div>
+
+        <div class="timeline-milestone">
+          <div class="year">1998</div>
+          <h4>Newbury Street Salon</h4>
+          <p>
+            Harbor &amp; Thread opens its flagship boutique in Back Bay, expanding into Goodyear-welted leather loafers and refined tailoring.
+          </p>
+        </div>
+
+        <div class="timeline-milestone">
+          <div class="year">2016</div>
+          <h4>Traceable Sustainability</h4>
+          <p>
+            Committed to 100% certified non-mulesed wool, biodegradable horn buttons, and carbon-neutral courier logistics across the United States.
+          </p>
+        </div>
+
+        <div class="timeline-milestone">
+          <div class="year">2026</div>
+          <h4>The Modern Atelier</h4>
+          <p>
+            Unveiling our digital styling experience, private lookbook drops, and same-day delivery service throughout Greater Boston.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Book Bespoke Appointment -->
+    <section class="atelier-craft-section" style="background: #faf7f2; border-top: 1px solid var(--color-border);">
+      <div style="max-width: 680px; margin: 0 auto; text-align: center;">
+        <p class="eyebrow">Personal Concierge</p>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin: 4px 0 12px;">Visit Our Boston Studios</h2>
+        <p style="color: var(--color-muted); font-size: 14px; line-height: 1.7; margin-bottom: 28px;">
+          Experience one-on-one wardrobe consultation, custom overcoat tailoring, or explore fabric swatches over espresso at our Newbury Street or Seaport studios.
+        </p>
+
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <a href="index.html#shop" class="btn primary">Shop Current Collection</a>
+          <button type="button" class="btn secondary" data-action="open-feedback">Speak with Concierge ✦</button>
+          <a href="lookbook.html" class="btn ghost">View Seasonal Lookbook</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Standardized 4-Page Pagination: Page 4 Active -->
+    <div class="pagination" aria-label="Page navigation" style="padding: 20px 0 50px;">
+      <button class="page-btn" data-page="prev" title="Page 3: Experience" aria-label="Previous page">←</button>
+      <button class="page-btn" data-page="1" title="Page 1: Home">1</button>
+      <button class="page-btn" data-page="2" title="Page 2: Lookbook">2</button>
+      <button class="page-btn" data-page="3" title="Page 3: Experience">3</button>
+      <button class="page-btn active" data-page="4" title="Page 4: Heritage" aria-current="page">4</button>
+      <button class="page-btn" data-page="next" disabled title="End of collection" aria-label="Next page">→</button>
+    </div>
+  </main>
+
+  <a class="feedback-fab" href="#" data-action="open-feedback"><span>✦</span> Feedback</a>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Harbor &amp; Thread</div>
+        <p>Contemporary clothing and accessories inspired by Boston life.</p>
+        <p class="address">Boston, Massachusetts, USA</p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="experience.html">Experience</a>
+        <a href="heritage.html">The Atelier &amp; Heritage</a>
+        <a href="account.html">Account</a>
+        <a href="index.html#shop">Trending Now</a>
+      </div>
+
+      <div>
+        <h4>Customer Care</h4>
+        <a href="#" data-action="open-feedback">Feedback &amp; Reviews</a>
+        <a href="account.html">Customer Account</a>
+        <a href="experience.html#help">Styling &amp; Care</a>
+        <a href="experience.html#help">Shipping &amp; Returns</a>
+        <a href="experience.html#help">Shopping Guide</a>
+      </div>
+
+      <div>
+        <h4>Stay in the loop</h4>
+        <p>Style notes, Boston edits, and seasonal drops.</p>
+        <form class="newsletter" novalidate>
+          <input type="email" placeholder="Email address" required aria-label="Newsletter email">
+          <button type="submit">Join</button>
+        </form>
+        <div class="newsletter-message" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Harbor &amp; Thread. All rights reserved.</span>
+      <span>Boston, USA</span>
+    </div>
+  </footer>
+
+  <script src="js/cart.js"></script>
+  <script src="js/email-preview.js"></script>
+  <script src="js/feedback-drawer.js"></script>
+  <script src="js/newsletter.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

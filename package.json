@@ -1,0 +1,22 @@
+{
+  "name": "harbor-and-thread",
+  "version": "1.0.0",
+  "description": "Harbor & Thread — Boston Fashion responsive website with Supabase integration",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "node build-vercel.js"
+  },
+  "keywords": [
+    "fashion",
+    "boston",
+    "supabase",
+    "responsive-design"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.10.0",
+    "pg": "^8.23.1"
+  }
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Experience | Harbor & Thread</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">Harbor & Thread Customer Experience • Boston, Massachusetts</div>
+
+  <header class="topbar">
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a class="brand" href="index.html" aria-label="Harbor and Thread Home">
+      <span class="brand-mark">H&T</span>
+      <span>
+        <strong>Harbor & Thread</strong>
+        <small>Boston, USA</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#footwear">Footwear</a>
+      <a href="lookbook.html">Lookbook</a>
+      <a href="experience.html" class="nav-active" aria-current="page">Experience</a>
+      <a href="heritage.html">Heritage</a>
+      <a href="account.html">Account</a>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="header-feedback-btn" data-action="open-feedback">Feedback</button>
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="Search fashion..." aria-label="Search products">
+        <button id="searchBtn" aria-label="Search" type="button">⌕</button>
+      </div>
+      <a href="experience.html#reviews" class="icon-btn" title="Customer Reviews" aria-label="Customer Reviews">💬</a>
+      <a href="index.html#shop" class="icon-btn" title="Shop Collection" aria-label="Shop Collection">🛍</a>
+      <a href="account.html" class="icon-btn" title="Customer Account" aria-label="Customer Account">👤</a>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar" aria-hidden="true" aria-label="Mobile Navigation">
+    <div class="sidebar-head">
+      <strong>Explore</strong>
+      <button id="closeSidebar" aria-label="Close navigation menu" type="button">×</button>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="index.html#footwear">Footwear</a>
+    <a href="lookbook.html">Lookbook</a>
+    <a href="experience.html" class="nav-active" aria-current="page">Experience</a>
+    <a href="heritage.html">The Atelier &amp; Heritage</a>
+    <a href="account.html">Account</a>
+    <button type="button" class="sidebar-feedback" data-action="open-feedback" style="background:none;border:none;width:100%;text-align:left;padding:14px 0;font-size:15px;cursor:pointer;">Feedback ✦</button>
+    <a href="index.html#shop">Trending Now</a>
+    <div class="sidebar-note">
+      Contemporary fashion inspired by Boston brownstone streets and coastal New England life.
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <main class="experience-main">
+    <section class="experience-hero">
+      <div class="experience-hero-copy">
+        <p class="eyebrow">Page 3 • Customer Experience</p>
+        <h1>Helpful details.<br>Real customer voices.</h1>
+        <p>Explore shopping guidance, useful tooltips, store alerts, and recent customer comments in the same premium Boston-inspired Harbor & Thread style.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#help">Browse Help</a>
+          <a class="btn ghost" href="#reviews">Read Comments</a>
+        </div>
+      </div>
+      <div class="experience-hero-image">
+        <img src="images/experience-model.jpg" alt="Fashion model wearing a warm camel coat and knitwear in a Boston boutique">
+      </div>
+    </section>
+
+    <section class="alert-panel" aria-live="polite">
+      <div class="alert-icon">✦</div>
+      <div>
+        <strong>Boston Store Alert</strong>
+        <p>Free U.S. shipping is available on orders over $150. Boston pickup options may also be available.</p>
+      </div>
+      <button id="dismissAlert" type="button" aria-label="Dismiss alert">×</button>
+    </section>
+
+    <section class="experience-section" id="help">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Customer Care & Guidance</p>
+          <h2>Style & Shopping Advice</h2>
+        </div>
+        <div class="tooltip-wrap">
+          <button class="tooltip-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-describedby="tooltip-help">Shopping info ⓘ</button>
+          <div class="tooltip-box" id="tooltip-help" role="tooltip">Tap or hover for guidance on styling, garment preservation, and Boston pickup options.</div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <article class="accordion-item active">
+          <button class="accordion-trigger" type="button" aria-expanded="true">
+            <span>Styling Guidance</span><span class="accordion-plus">−</span>
+          </button>
+          <div class="accordion-content">
+            <p>Layering is essential for Boston’s changing coastal climate. Begin with neutral base layers like our Back Bay oversized knit polo, pair with relaxed denim, and drape a camel coat or lightweight knit for an effortless transition from daytime city strolls to crisp evenings.</p>
+          </div>
+        </article>
+        <article class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            <span>Product Care</span><span class="accordion-plus">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Preserve fabric integrity by washing denim inside out in cold water and air-drying flat. For textured knitwear, use a gentle wool cycle or hand wash with mild detergent, and store folded to maintain the relaxed silhouette and prevent stretching.</p>
+          </div>
+        </article>
+        <article class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            <span>Choosing Accessories</span><span class="accordion-plus">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>When styling a neutral capsule wardrobe, allow one standout accessory to lead. A polished Commonwealth watch adds sophistication to casual knitwear, while amber-framed Seaport sunglasses bring warmth to cooler autumn tones without cluttering your look.</p>
+          </div>
+        </article>
+        <article class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            <span>Shopping Experience</span><span class="accordion-plus">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Filter directly by maximum budget on the Home page, explore complete outfit pairings in the Lookbook, and enjoy complimentary U.S. shipping on orders over $150 with convenient Boston pickup options.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="review-section" id="reviews">
+      <div class="section-heading">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <p class="eyebrow" style="margin: 0;">Customer voices</p>
+            <span class="live-pill pulsing"><span class="pulse-dot"></span> Live Real-Time Feed</span>
+          </div>
+          <h2>What Shoppers Are Saying</h2>
+        </div>
+        <div class="tooltip-wrap">
+          <button class="tooltip-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-describedby="tooltip-reviews">About real-time reviews ⓘ</button>
+          <div class="tooltip-box" id="tooltip-reviews" role="tooltip">Verified customer feedback and testimonials streamed live directly from our community database.</div>
+        </div>
+      </div>
+
+      <!-- Reviews Carousel -->
+      <div class="feedback-carousel-wrapper" id="reviewCarouselWrapper">
+        <div class="carousel-control-row">
+          <div class="carousel-indicators-info">
+            <span class="carousel-counter-badge" id="reviewCounterBadge">Slide 1 of 4</span>
+            <span class="carousel-swipe-hint">Swipe or use arrows ‹ › to browse</span>
+          </div>
+          <div class="carousel-nav-buttons">
+            <button type="button" class="carousel-nav-btn prev-btn" id="reviewCarouselPrev" aria-label="Previous customer story" title="Previous story">‹</button>
+            <button type="button" class="carousel-nav-btn next-btn" id="reviewCarouselNext" aria-label="Next customer story" title="Next story">›</button>
+          </div>
+        </div>
+
+        <div class="feedback-carousel-track" id="reviewGrid" role="region" aria-roledescription="carousel" aria-label="Customer stories carousel" tabindex="0">
+          <div class="review-grid-loading" id="reviewLoading" role="status">
+            <p>Loading customer stories...</p>
+          </div>
+        </div>
+
+        <div class="carousel-dots-wrap" id="reviewCarouselDots" role="tablist" aria-label="Stories slide navigation"></div>
+      </div>
+
+      <div class="review-alert-actions">
+        <button type="button" class="btn primary dark-btn" data-action="open-feedback">Leave Your Own Feedback →</button>
+        <a class="btn ghost dark-ghost" href="index.html#shop">Browse Trending Now</a>
+        <a class="btn secondary" href="lookbook.html">Explore Lookbook</a>
+      </div>
+
+      <div class="pagination" aria-label="Page navigation" style="margin-top: 36px;">
+        <button class="page-btn" data-page="prev" title="Page 2: Lookbook" aria-label="Previous page">←</button>
+        <button class="page-btn" data-page="1" title="Page 1: Home">1</button>
+        <button class="page-btn" data-page="2" title="Page 2: Lookbook">2</button>
+        <button class="page-btn active" data-page="3" title="Page 3: Experience">3</button>
+        <button class="page-btn" data-page="4" title="Page 4: Heritage">4</button>
+        <button class="page-btn" data-page="next" title="Page 4: Heritage" aria-label="Next page">→</button>
+      </div>
+    </section>
+
+    <section class="city-strip">
+      <div><span>01</span><strong>Styling & Care</strong><p>Thoughtful recommendations tailored for New England weather.</p></div>
+      <div><span>02</span><strong>Helpful Tooltips</strong><p>Contextual shopping notes available on hover, focus, or tap.</p></div>
+      <div><span>03</span><strong>Verified Feedback</strong><p>Live customer testimonials loaded directly from our community database.</p></div>
+    </section>
+  </main>
+
+  <a class="feedback-fab" href="#" data-action="open-feedback"><span>✦</span> Feedback</a>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Harbor & Thread</div>
+        <p>Contemporary clothing and accessories inspired by Boston life.</p>
+        <p class="address">Boston, Massachusetts, USA</p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="experience.html">Experience</a>
+        <a href="heritage.html">The Atelier &amp; Heritage</a>
+        <a href="account.html">Account</a>
+        <a href="index.html#shop">Trending Now</a>
+      </div>
+
+      <div>
+        <h4>Customer Care</h4>
+        <button type="button" data-action="open-feedback" style="background:none;border:none;color:#bcb5af;font-size:12px;margin:10px 0;padding:0;cursor:pointer;display:block;">Feedback &amp; Reviews</button>
+        <a href="experience.html#help">Styling &amp; Care</a>
+        <a href="experience.html#help">Shipping &amp; Returns</a>
+        <a href="experience.html#help">Shopping Guide</a>
+      </div>
+
+      <div>
+        <h4>Stay in the loop</h4>
+        <p>Style notes, Boston edits, and seasonal drops.</p>
+        <form class="newsletter" novalidate>
+          <input type="email" placeholder="Email address" required aria-label="Newsletter email">
+          <button type="submit">Join</button>
+        </form>
+        <div class="newsletter-message" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Harbor & Thread. All rights reserved.</span>
+      <span>Boston, USA</span>
+    </div>
+  </footer>
+
+  <!-- Supabase Client & Testimonials Integration -->
+  <script>try{localStorage.removeItem('harbor_live_feedback_submissions');sessionStorage.removeItem('harbor_live_feedback_submissions');}catch(e){}</script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/email-preview.js"></script>
+  <script src="js/feedback-drawer.js"></script>
+  <script src="js/newsletter.js"></script>
+  <script src="js/testimonials.js?v=20261009-final"></script>
+  <script src="script.js"></script>
+</body>
+</html>

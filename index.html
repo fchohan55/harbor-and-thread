@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harbor & Thread | Boston Fashion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">
+    Free shipping across the U.S. on orders over $150 • Boston pickup available
+  </div>
+
+  <header class="topbar">
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a class="brand" href="index.html">
+      <span class="brand-mark">H&T</span>
+      <span>
+        <strong>Harbor & Thread</strong>
+        <small>Boston, USA</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-active" aria-current="page">Home</a>
+      <a href="#footwear" id="navFootwearLink">Footwear</a>
+      <a href="lookbook.html">Lookbook</a>
+      <a href="experience.html">Experience</a>
+      <a href="heritage.html">Heritage</a>
+      <a href="account.html">Account</a>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="header-feedback-btn" data-action="open-feedback">Feedback</button>
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="Search fashion, footwear..." aria-label="Search products">
+        <button id="searchBtn" aria-label="Search" type="button">⌕</button>
+      </div>
+      <a href="experience.html#reviews" class="icon-btn" title="Customer Reviews" aria-label="Customer Reviews">💬</a>
+      <a href="index.html#shop" class="icon-btn" title="Shop Collection" aria-label="Shop Collection">🛍</a>
+      <a href="account.html" class="icon-btn" title="Customer Account" aria-label="Customer Account">👤</a>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar" aria-hidden="true" aria-label="Mobile Navigation">
+    <div class="sidebar-head">
+      <strong>Explore</strong>
+      <button id="closeSidebar" aria-label="Close navigation menu" type="button">×</button>
+    </div>
+    <a href="index.html" class="nav-active" aria-current="page">Home</a>
+    <a href="#footwear" id="sidebarFootwearLink">Footwear (Shoes &amp; Boots)</a>
+    <a href="lookbook.html">Lookbook</a>
+    <a href="experience.html">Experience</a>
+    <a href="heritage.html">The Atelier &amp; Heritage</a>
+    <a href="account.html">Account</a>
+    <button type="button" class="sidebar-feedback" data-action="open-feedback" style="background:none;border:none;width:100%;text-align:left;padding:14px 0;font-size:15px;cursor:pointer;">Feedback ✦</button>
+    <a href="index.html#shop">Trending Now</a>
+    <a href="#new-arrivals">New Arrivals Drop</a>
+    <div class="sidebar-note">
+      Contemporary fashion inspired by Boston brownstone streets and coastal New England life.
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Fall / Winter 2026</p>
+        <h1>Boston Style.<br>Made Effortless.</h1>
+        <p>
+          Modern wardrobe essentials inspired by brownstone streets,
+          harbor mornings, and crisp New England evenings.
+        </p>
+        <div class="hero-buttons">
+          <a href="#shop" class="btn primary">Shop Collection</a>
+          <a href="#new-arrivals" class="btn ghost" id="btnHeroExploreNewArrivals">Explore New Arrivals</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <img src="images/hero-model.png" alt="Fashion model sitting on a sofa in a warm editorial setting">
+      </div>
+
+      <div class="hero-card">
+        <span>Editor's Pick</span>
+        <strong>Coastal Layers</strong>
+        <small>Curated for 50–65°F days</small>
+      </div>
+    </section>
+
+    <!-- Dedicated New Arrivals Section: 8 Distinct Products -->
+    <section class="new-arrivals-section" id="new-arrivals">
+      <div class="new-arrivals-header">
+        <div>
+          <p class="eyebrow">Autumn / Winter Drop</p>
+          <h2>New Arrivals in the Boston Atelier</h2>
+          <p>
+            Eight brand-new seasonal pieces handcrafted from New England melange wool, Tuscan calf suede, and Japanese selvedge denim.
+          </p>
+        </div>
+        <a href="#shop" class="text-link">View all catalog items →</a>
+      </div>
+
+      <div class="new-arrivals-grid" id="newArrivalsGrid" aria-live="polite">
+        <!-- 8 Distinct New Arrivals rendered dynamically by js/products.js -->
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="shop-top">
+        <div>
+          <p class="eyebrow">Curated in Boston</p>
+          <h2>Trending Now</h2>
+        </div>
+
+        <div class="budget-box">
+          <div class="budget-row">
+            <label for="budgetSlider">Maximum budget</label>
+            <strong id="budgetValue">$250</strong>
+          </div>
+          <input id="budgetSlider" type="range" min="25" max="500" value="250" step="25">
+          <div class="budget-scale"><span>$25</span><span>$500+</span></div>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Product Categories">
+        <button class="cat-pill active" data-category="all" role="tab" aria-selected="true" type="button">All Items (9)</button>
+        <button class="cat-pill" data-category="footwear" role="tab" aria-selected="false" type="button" id="tabFootwear">Footwear (3) ✦</button>
+        <button class="cat-pill" data-category="clothing" role="tab" aria-selected="false" type="button">Clothing (3)</button>
+        <button class="cat-pill" data-category="accessories" role="tab" aria-selected="false" type="button">Accessories (3)</button>
+      </div>
+
+      <div class="product-grid" id="productGrid" aria-live="polite">
+        <div class="product-grid-loading" id="productGridLoading" role="status">
+          <p>Loading curated Boston collection...</p>
+        </div>
+      </div>
+
+      <div class="empty-state" id="emptyState">
+        No products match your search and selected budget.
+      </div>
+
+      <div class="pagination" aria-label="Page navigation">
+        <button class="page-btn" data-page="prev" disabled aria-label="Previous page">←</button>
+        <button class="page-btn active" data-page="1" title="Page 1: Home" aria-current="page">1</button>
+        <button class="page-btn" data-page="2" title="Page 2: Lookbook">2</button>
+        <button class="page-btn" data-page="3" title="Page 3: Experience">3</button>
+        <button class="page-btn" data-page="4" title="Page 4: Heritage">4</button>
+        <button class="page-btn" data-page="next" title="Page 2: Lookbook" aria-label="Next page">→</button>
+      </div>
+    </section>
+
+    <!-- Dedicated Boston Footwear Showcase Section -->
+    <section class="footwear-section" id="footwear">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Boston Footwear Edit • Fall / Winter 2026</p>
+          <h2>Crafted for Cobblestone &amp; Coast</h2>
+          <p class="footwear-intro">
+            Handcrafted with genuine Italian calfskins, weather-sealed suede, and custom-cushioned soles. Designed to move seamlessly from Beacon Hill brownstone walks to harborfront dinners.
+          </p>
+        </div>
+        <button type="button" class="btn secondary" onclick="window.selectCategory('footwear')">View in Catalog Grid →</button>
+      </div>
+
+      <div class="footwear-grid">
+        <article class="footwear-card" data-id="b0000000-0000-0000-0000-000000000007">
+          <div class="footwear-image-wrap">
+            <img src="images/loafers.jpg" alt="Beacon Leather Penny Loafers in chestnut Italian calfskin" loading="lazy">
+            <span class="footwear-badge">NEW DROP</span>
+          </div>
+          <div class="footwear-content">
+            <span class="product-category">Footwear</span>
+            <h3>Beacon Leather Penny Loafers</h3>
+            <p class="footwear-subtitle">Chestnut Italian Calfskin</p>
+            <div class="price">$195</div>
+            <p class="footwear-desc">Handcrafted in genuine full-grain Italian calfskin with Goodyear-welted construction. Features a classic penny strap, cushioned arch support, and stacked leather heel designed for all-day city walks through Beacon Hill.</p>
+            <div class="footwear-actions">
+              <button type="button" class="btn primary dark-btn" onclick="if(window.HarborCart) window.HarborCart.addToCart({id:'b0000000-0000-0000-0000-000000000007', name:'Beacon Leather Penny Loafers', price:195, image_url:'images/loafers.jpg', category:'Footwear'}, 1)">+ Add to Bag</button>
+              <button type="button" class="btn ghost dark-ghost" onclick="if(window.openQuickViewById) window.openQuickViewById('b0000000-0000-0000-0000-000000000007')">Quick View</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="footwear-card" data-id="b0000000-0000-0000-0000-000000000008">
+          <div class="footwear-image-wrap">
+            <img src="images/boots.jpg" alt="Seaport Suede Chelsea Boots in espresso brown" loading="lazy">
+            <span class="footwear-badge">BESTSELLER</span>
+          </div>
+          <div class="footwear-content">
+            <span class="product-category">Footwear</span>
+            <h3>Seaport Suede Chelsea Boots</h3>
+            <p class="footwear-subtitle">Espresso Weather-Resistant Suede</p>
+            <div class="price">$225</div>
+            <p class="footwear-desc">Cut from supple espresso calf suede with weather-resistant finishing, elastic side gussets, pull tabs, and custom lugged traction soles engineered for crisp New England autumn and winter mornings.</p>
+            <div class="footwear-actions">
+              <button type="button" class="btn primary dark-btn" onclick="if(window.HarborCart) window.HarborCart.addToCart({id:'b0000000-0000-0000-0000-000000000008', name:'Seaport Suede Chelsea Boots', price:225, image_url:'images/boots.jpg', category:'Footwear'}, 1)">+ Add to Bag</button>
+              <button type="button" class="btn ghost dark-ghost" onclick="if(window.openQuickViewById) window.openQuickViewById('b0000000-0000-0000-0000-000000000008')">Quick View</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="footwear-card" data-id="b0000000-0000-0000-0000-000000000009">
+          <div class="footwear-image-wrap">
+            <img src="images/sneakers.jpg" alt="Commonwealth Low-Top Sneaker in white calfskin with gum sole" loading="lazy">
+            <span class="footwear-badge">PREMIUM</span>
+          </div>
+          <div class="footwear-content">
+            <span class="product-category">Footwear</span>
+            <h3>Commonwealth Low-Top Sneaker</h3>
+            <p class="footwear-subtitle">Pristine White Calfskin / Gum Sole</p>
+            <div class="price">$160</div>
+            <p class="footwear-desc">Minimalist Boston city sneakers crafted from smooth Italian Nappa leather with soft off-white suede accents, breathable calfskin lining, and durable natural gum rubber cupsoles.</p>
+            <div class="footwear-actions">
+              <button type="button" class="btn primary dark-btn" onclick="if(window.HarborCart) window.HarborCart.addToCart({id:'b0000000-0000-0000-0000-000000000009', name:'Commonwealth Low-Top Sneaker', price:160, image_url:'images/sneakers.jpg', category:'Footwear'}, 1)">+ Add to Bag</button>
+              <button type="button" class="btn ghost dark-ghost" onclick="if(window.openQuickViewById) window.openQuickViewById('b0000000-0000-0000-0000-000000000009')">Quick View</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="quick-links" id="new">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Shop your way</p>
+          <h2>Explore Collections</h2>
+        </div>
+        <a href="#shop" class="text-link">View all →</a>
+      </div>
+
+      <div class="icon-grid">
+        <article class="icon-card" onclick="window.selectCategory('all')">
+          <div class="icon">◒</div>
+          <h3>New Arrivals</h3>
+          <p>Fresh seasonal drops</p>
+          <button type="button" onclick="event.stopPropagation(); window.selectCategory('all');">Browse</button>
+        </article>
+
+        <article class="icon-card" onclick="window.selectCategory('clothing')">
+          <div class="icon">♚</div>
+          <h3>Premium Edit</h3>
+          <p>Elevated everyday pieces</p>
+          <button type="button" onclick="event.stopPropagation(); window.selectCategory('clothing');">Explore</button>
+        </article>
+
+        <article class="icon-card footwear-highlight-card" id="footwearCard" onclick="window.selectCategory('footwear')">
+          <div class="icon">◈</div>
+          <span class="icon-badge">3 NEW STYLES</span>
+          <h3>Footwear</h3>
+          <p>Handcrafted leather &amp; city-ready comfort</p>
+          <button type="button" onclick="event.stopPropagation(); window.selectCategory('footwear');">Shop Shoes →</button>
+        </article>
+
+        <article class="icon-card" onclick="window.selectCategory('accessories')">
+          <div class="icon">◇</div>
+          <h3>Accessories</h3>
+          <p>Finish your look</p>
+          <button type="button" onclick="event.stopPropagation(); window.selectCategory('accessories');">Discover</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="city-strip">
+      <div>
+        <span>01</span>
+        <strong>Boston-based style</strong>
+        <p>Curated with New England seasons in mind.</p>
+      </div>
+      <div>
+        <span>02</span>
+        <strong>Easy U.S. delivery</strong>
+        <p>Fast shipping with simple returns.</p>
+      </div>
+      <div>
+        <span>03</span>
+        <strong>Personal support</strong>
+        <p>Reach our customer care team when you need us.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Product Quick View Modal -->
+  <dialog id="productModal" class="product-modal" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="closeProductModal" aria-label="Close product details">×</button>
+      <div class="modal-content">
+        <div class="modal-image-wrap">
+          <img id="modalImage" src="images/outfit.jpg" alt="Product details">
+        </div>
+        <div class="modal-body">
+          <span id="modalCategory" class="product-category">Clothing</span>
+          <h2 id="modalTitle">Product Title</h2>
+          <p id="modalSubtitle" class="modal-subtitle">Description</p>
+          <div id="modalPrice" class="price">$0</div>
+          <p class="modal-description" id="modalDescription">Carefully crafted for timeless New England style, everyday comfort, and versatile seasonal layering.</p>
+          <div class="modal-actions">
+            <button type="button" class="btn primary modal-add-bag-btn" id="modalAddBagBtn" style="background:#171512;color:#fff;">+ Add to Bag</button>
+            <button type="button" class="btn ghost modal-wishlist-btn" id="modalWishlistBtn">Add to Wishlist ♡</button>
+            <button type="button" class="btn ghost dark-ghost" id="modalCloseBtn">Back to Shop</button>
+          </div>
+          <div id="modalToast" class="modal-toast" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <a class="feedback-fab" href="feedback.html#feedback-form-section"><span>✦</span> Feedback</a>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Harbor & Thread</div>
+        <p>Contemporary clothing and accessories inspired by Boston life.</p>
+        <p class="address">Boston, Massachusetts, USA</p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="experience.html">Experience</a>
+        <a href="heritage.html">The Atelier &amp; Heritage</a>
+        <a href="account.html">Account</a>
+        <a href="index.html#shop">Trending Now</a>
+      </div>
+
+      <div>
+        <h4>Customer Care</h4>
+        <button type="button" data-action="open-feedback" style="background:none;border:none;color:#bcb5af;font-size:12px;margin:10px 0;padding:0;cursor:pointer;display:block;">Feedback &amp; Reviews</button>
+        <a href="experience.html#help">Styling &amp; Care</a>
+        <a href="experience.html#help">Shipping &amp; Returns</a>
+        <a href="experience.html#help">Shopping Guide</a>
+      </div>
+
+      <div>
+        <h4>Stay in the loop</h4>
+        <p>Style notes, Boston edits, and seasonal drops.</p>
+        <form class="newsletter" novalidate>
+          <input type="email" placeholder="Email address" required aria-label="Newsletter email">
+          <button type="submit">Join</button>
+        </form>
+        <div class="newsletter-message" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Harbor & Thread. All rights reserved.</span>
+      <span>Boston, USA</span>
+    </div>
+  </footer>
+
+  <!-- Supabase Client Setup -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/email-preview.js"></script>
+  <script src="js/feedback-drawer.js"></script>
+  <script src="js/newsletter.js"></script>
+  <script src="js/products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

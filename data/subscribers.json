@@ -1,0 +1,12 @@
+[
+  {
+    "email": "concierge@harborandthread.com",
+    "source": "boston_flagship",
+    "subscribed_at": "2026-10-01T10:00:00.000Z"
+  },
+  {
+    "email": "test.customer@gmail.com",
+    "source": "website_footer",
+    "subscribed_at": "2026-10-11T08:09:35.586Z"
+  }
+]

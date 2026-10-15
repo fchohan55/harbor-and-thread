@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account | Harbor & Thread</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="account-page">
+  <div class="announcement">Customer Portal • Secure Harbor &amp; Thread Account</div>
+
+  <header class="topbar">
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a class="brand" href="index.html" aria-label="Harbor and Thread Home">
+      <span class="brand-mark">H&T</span>
+      <span>
+        <strong>Harbor & Thread</strong>
+        <small>Boston, USA</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#footwear">Footwear</a>
+      <a href="lookbook.html">Lookbook</a>
+      <a href="experience.html">Experience</a>
+      <a href="heritage.html">Heritage</a>
+      <a href="account.html" class="nav-active" aria-current="page">Account</a>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="header-feedback-btn" data-action="open-feedback">Feedback</button>
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="Search fashion..." aria-label="Search products">
+        <button id="searchBtn" aria-label="Search" type="button">⌕</button>
+      </div>
+      <a href="experience.html#reviews" class="icon-btn" title="Customer Reviews" aria-label="Customer Reviews">💬</a>
+      <a href="index.html#shop" class="icon-btn" title="Shop Collection" aria-label="Shop Collection">🛍</a>
+      <a href="account.html" class="icon-btn" title="Customer Account" aria-label="Customer Account">👤</a>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar" aria-hidden="true" aria-label="Mobile Navigation">
+    <div class="sidebar-head">
+      <strong>Explore</strong>
+      <button id="closeSidebar" aria-label="Close navigation menu" type="button">×</button>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="index.html#footwear">Footwear</a>
+    <a href="lookbook.html">Lookbook</a>
+    <a href="experience.html">Experience</a>
+    <a href="heritage.html">The Atelier &amp; Heritage</a>
+    <a href="account.html" class="nav-active" aria-current="page">Account</a>
+    <button type="button" class="sidebar-feedback" data-action="open-feedback" style="background:none;border:none;width:100%;text-align:left;padding:14px 0;font-size:15px;cursor:pointer;">Feedback ✦</button>
+    <a href="index.html#shop">Trending Now</a>
+    <div class="sidebar-note">
+      Contemporary fashion inspired by Boston brownstone streets and coastal New England life.
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <main class="feedback-main">
+    <section class="feedback-intro">
+      <p class="eyebrow">Harbor &amp; Thread Circle</p>
+      <h1>Your Boston style,<br>personalized.</h1>
+      <p>
+        Sign in to your account to save your favorite seasonal pieces, manage notifications, and access private drops.
+      </p>
+
+      <div class="feedback-highlights">
+        <div><span>✓</span> Saved New England favorites</div>
+        <div><span>✓</span> Private seasonal collection access</div>
+        <div><span>✓</span> Direct concierge styling support</div>
+      </div>
+    </section>
+
+    <section class="form-card" id="account-card">
+      <!-- Auth Mode Tabs (Shown when logged out) -->
+      <nav class="auth-tabs" id="authTabs" aria-label="Authentication Options">
+        <button type="button" class="auth-tab-btn active" data-tab="signin" id="tabSignIn">Sign In</button>
+        <button type="button" class="auth-tab-btn" data-tab="signup" id="tabSignUp">Create Account</button>
+        <button type="button" class="auth-tab-btn" data-tab="reset" id="tabReset">Reset Password</button>
+      </nav>
+
+      <!-- Panel 1: Sign In -->
+      <div class="auth-panel active" id="panelSignIn" role="tabpanel" aria-labelledby="tabSignIn">
+        <form id="signInForm" novalidate>
+          <div class="form-grid">
+            <div class="field full">
+              <label for="signInEmail">Email *</label>
+              <input id="signInEmail" name="email" type="email" placeholder="name@example.com" required autocomplete="email">
+            </div>
+            <div class="field full">
+              <label for="signInPassword">Password *</label>
+              <input id="signInPassword" name="password" type="password" placeholder="Enter your password" required autocomplete="current-password">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn primary form-submit" id="signInBtn">Sign In</button>
+          </div>
+          <button type="button" class="auth-helper-link" id="linkToReset">Forgot your password?</button>
+        </form>
+      </div>
+
+      <!-- Panel 2: Sign Up -->
+      <div class="auth-panel" id="panelSignUp" role="tabpanel" aria-labelledby="tabSignUp">
+        <form id="signUpForm" novalidate>
+          <div class="form-grid">
+            <div class="field full">
+              <label for="signUpEmail">Email *</label>
+              <input id="signUpEmail" name="email" type="email" placeholder="name@example.com" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="signUpPassword">Password *</label>
+              <input id="signUpPassword" name="password" type="password" placeholder="At least 8 characters" required minlength="8" autocomplete="new-password">
+              <small>Minimum 8 characters</small>
+            </div>
+            <div class="field">
+              <label for="signUpConfirmPassword">Confirm Password *</label>
+              <input id="signUpConfirmPassword" name="confirmPassword" type="password" placeholder="Repeat your password" required minlength="8" autocomplete="new-password">
+              <small>Must match password</small>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn primary form-submit" id="signUpBtn">Create Account</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Panel 3: Reset Password -->
+      <div class="auth-panel" id="panelReset" role="tabpanel" aria-labelledby="tabReset">
+        <form id="resetPasswordForm" novalidate>
+          <div class="form-grid">
+            <div class="field full">
+              <label for="resetEmail">Email *</label>
+              <input id="resetEmail" name="email" type="email" placeholder="name@example.com" required autocomplete="email">
+              <small>We'll send password reset instructions to this address.</small>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn primary form-submit" id="resetBtn">Send Reset Instructions</button>
+          </div>
+          <button type="button" class="auth-helper-link" id="linkToSignIn">Back to Sign In</button>
+        </form>
+      </div>
+
+      <!-- Authenticated State (Shown when logged in) -->
+      <div class="account-profile-card" id="accountStateCard" style="display: none;">
+        <span class="account-badge">Active Member</span>
+        <h2>Welcome back</h2>
+        <div class="account-user-email" id="userEmailDisplay">customer@example.com</div>
+        <div class="account-info-box">
+          <p>You are securely signed in to your <strong>Harbor &amp; Thread</strong> customer account.</p>
+          <p>Authentication is managed directly by Supabase Auth.</p>
+        </div>
+        <div class="form-actions" style="justify-content: flex-start;">
+          <button type="button" class="btn secondary" id="signOutBtn">Sign Out</button>
+        </div>
+      </div>
+
+      <!-- Status Message Area -->
+      <div id="authMessage" class="form-message" role="status" aria-live="polite"></div>
+    </section>
+
+    <!-- Orders & Purchases Tracking (Full-Stack Backend Integrated) -->
+    <section class="form-card" id="order-history-card" style="margin-top: 32px;">
+      <h3 style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; margin: 0 0 8px; color: var(--color-text);">Track Orders &amp; Receipts</h3>
+      <p style="color: var(--color-muted); font-size: 13.5px; margin: 0 0 20px;">
+        View your purchase history and live fulfillment status directly from our database.
+      </p>
+
+      <div style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+        <input type="text" id="orderSearchInput" placeholder="Enter Order # (e.g. HT-2026-8864) or your email" style="flex: 1; min-width: 240px; padding: 11px 14px; border: 1px solid var(--color-border-dark); border-radius: 8px; font-size: 13.5px;">
+        <button type="button" id="lookupOrderBtn" class="btn primary" style="font-size: 13.5px;">Find Order</button>
+      </div>
+
+      <div id="orderHistoryResults"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Harbor & Thread</div>
+        <p>Contemporary clothing and accessories inspired by Boston life.</p>
+        <p class="address">Boston, Massachusetts, USA</p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="experience.html">Experience</a>
+        <a href="heritage.html">The Atelier &amp; Heritage</a>
+        <a href="account.html">Account</a>
+        <a href="index.html#shop">Trending Now</a>
+      </div>
+
+      <div>
+        <h4>Customer Care</h4>
+        <button type="button" data-action="open-feedback" style="background:none;border:none;color:#bcb5af;font-size:12px;margin:10px 0;padding:0;cursor:pointer;display:block;">Feedback &amp; Reviews</button>
+        <a href="account.html">Customer Account</a>
+        <a href="experience.html#help">Styling &amp; Care</a>
+        <a href="experience.html#help">Shipping &amp; Returns</a>
+        <a href="experience.html#help">Shopping Guide</a>
+      </div>
+
+      <div>
+        <h4>Stay in the loop</h4>
+        <p>Style notes, Boston edits, and seasonal drops.</p>
+        <form class="newsletter" novalidate>
+          <input type="email" placeholder="Email address" required aria-label="Newsletter email">
+          <button type="submit">Join</button>
+        </form>
+        <div class="newsletter-message" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Harbor & Thread. All rights reserved.</span>
+      <span>Boston, USA</span>
+    </div>
+  </footer>
+
+  <!-- Supabase Client & Auth Integration -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/email-preview.js"></script>
+  <script src="js/feedback-drawer.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/newsletter.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

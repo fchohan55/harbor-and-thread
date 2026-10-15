@@ -1,0 +1,6 @@
+1. Initial website prompt — original wording
+You are a website UI designer. I have an online clothing store. I want you to take inspiration from this image and develop a landing web page which consisting menu bar, sidebar with hamburger button. search at the top right corner, buttons, icon cards at the center of the page, pagination at the bottom, a range slider where a customer can select his or her budget, this webpage also has a feeback botton that takes you to second page where from elements including name text fields, email text fields, password text fields, date picker, time picker, dropdown select to you know customers age range, fire upload, text area where the customer will give comment from 6 to 100 words and also add scrolling if the text in text area is more than 100 words. At the bottom there should be a beautiful footer and do remember that my website in based in Boston USA
+
+2. Repeated website prompt with responsive design
+You repeated the first prompt and added:
+Make the website responsive design that is responsive on PC as well as in mobile and tablet

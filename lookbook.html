@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boston Lookbook | Harbor & Thread</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">
+    Boston Style Edit • Curated seasonal inspiration from Harbor & Thread
+  </div>
+
+  <header class="topbar">
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a class="brand" href="index.html" aria-label="Harbor and Thread Home">
+      <span class="brand-mark">H&T</span>
+      <span>
+        <strong>Harbor & Thread</strong>
+        <small>Boston, USA</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#footwear">Footwear</a>
+      <a href="lookbook.html" class="nav-active" aria-current="page">Lookbook</a>
+      <a href="experience.html">Experience</a>
+      <a href="heritage.html">Heritage</a>
+      <a href="account.html">Account</a>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="header-feedback-btn" data-action="open-feedback">Feedback</button>
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="Search fashion..." aria-label="Search products">
+        <button id="searchBtn" aria-label="Search" type="button">⌕</button>
+      </div>
+      <a href="experience.html#reviews" class="icon-btn" title="Customer Reviews" aria-label="Customer Reviews">💬</a>
+      <a href="index.html#shop" class="icon-btn" title="Shop Collection" aria-label="Shop Collection">🛍</a>
+      <a href="account.html" class="icon-btn" title="Customer Account" aria-label="Customer Account">👤</a>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar" aria-hidden="true" aria-label="Mobile Navigation">
+    <div class="sidebar-head">
+      <strong>Explore</strong>
+      <button id="closeSidebar" aria-label="Close navigation menu" type="button">×</button>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="index.html#footwear">Footwear</a>
+    <a href="lookbook.html" class="nav-active" aria-current="page">Lookbook</a>
+    <a href="experience.html">Experience</a>
+    <a href="heritage.html">The Atelier &amp; Heritage</a>
+    <a href="account.html">Account</a>
+    <button type="button" class="sidebar-feedback" data-action="open-feedback" style="background:none;border:none;width:100%;text-align:left;padding:14px 0;font-size:15px;cursor:pointer;">Feedback ✦</button>
+    <a href="index.html#shop">Trending Now</a>
+    <div class="sidebar-note">
+      Contemporary fashion inspired by Boston brownstone streets and coastal New England life.
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <main class="lookbook-main">
+    <section class="lookbook-hero">
+      <div class="lookbook-copy">
+        <p class="eyebrow">Page 2 • Boston Style Edit</p>
+        <h1>City Layers.<br>Coastal Ease.</h1>
+        <p>
+          A refined lookbook inspired by Boston brownstones, harbor mornings,
+          and clean New England layering.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#looks">Explore Looks</a>
+          <a class="btn ghost" href="index.html#shop">Shop Trending Now</a>
+        </div>
+      </div>
+
+      <div class="lookbook-hero-image">
+        <img src="images/lookbook-model.jpg" alt="Blonde male fashion model in a tailored camel coat posing in a minimalist warm studio setting">
+      </div>
+    </section>
+
+    <section class="lookbook-section" id="looks">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Boston moods</p>
+          <h2>Style the Season</h2>
+        </div>
+        <a href="index.html#shop" class="text-link">Shop all →</a>
+      </div>
+
+      <div class="lookbook-grid" id="lookbookGrid" aria-live="polite">
+        <div class="lookbook-grid-loading" id="lookbookLoading" role="status">
+          <p>Loading curated Boston lookbook...</p>
+        </div>
+      </div>
+
+      <div class="pagination" aria-label="Page navigation">
+        <button class="page-btn" data-page="prev" title="Page 1: Home" aria-label="Previous page">←</button>
+        <button class="page-btn" data-page="1" title="Page 1: Home">1</button>
+        <button class="page-btn active" data-page="2" title="Page 2: Lookbook">2</button>
+        <button class="page-btn" data-page="3" title="Page 3: Experience">3</button>
+        <button class="page-btn" data-page="4" title="Page 4: Heritage">4</button>
+        <button class="page-btn" data-page="next" title="Page 3: Experience" aria-label="Next page">→</button>
+      </div>
+    </section>
+
+    <section class="lookbook-feature">
+      <div class="feature-copy">
+        <p class="eyebrow">Editor’s pick</p>
+        <h2>Keep the outfit simple. Let one accessory lead.</h2>
+        <p>
+          A refined watch or statement sunglasses can turn a neutral outfit into
+          a confident, polished look without losing the clean Harbor & Thread aesthetic.
+        </p>
+        <a href="index.html#shop" class="btn primary dark-btn">Shop the Edit</a>
+      </div>
+
+      <div class="feature-products">
+        <article class="mini-product">
+          <img src="images/watch.jpg" alt="Silver watch">
+          <div>
+            <strong>Commonwealth Watch</strong>
+            <span>$220</span>
+          </div>
+        </article>
+
+        <article class="mini-product">
+          <img src="images/sunglasses.jpg" alt="Brown sunglasses">
+          <div>
+            <strong>Seaport Sunglasses</strong>
+            <span>$130</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="city-strip lookbook-strip">
+      <div>
+        <span>01</span>
+        <strong>Boston inspired</strong>
+        <p>Warm neutrals and city-ready silhouettes.</p>
+      </div>
+      <div>
+        <span>02</span>
+        <strong>Easy layering</strong>
+        <p>Built for changing New England weather.</p>
+      </div>
+      <div>
+        <span>03</span>
+        <strong>Premium simplicity</strong>
+        <p>Clean styling with timeless accessories.</p>
+      </div>
+    </section>
+  </main>
+
+  <a class="feedback-fab" href="feedback.html#feedback-form-section">
+    <span>✦</span> Feedback
+  </a>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Harbor & Thread</div>
+        <p>Contemporary clothing and accessories inspired by Boston life.</p>
+        <p class="address">Boston, Massachusetts, USA</p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="experience.html">Experience</a>
+        <a href="heritage.html">The Atelier &amp; Heritage</a>
+        <a href="account.html">Account</a>
+        <a href="index.html#shop">Trending Now</a>
+      </div>
+
+      <div>
+        <h4>Customer Care</h4>
+        <button type="button" data-action="open-feedback" style="background:none;border:none;color:#bcb5af;font-size:12px;margin:10px 0;padding:0;cursor:pointer;display:block;">Feedback &amp; Reviews</button>
+        <a href="experience.html#help">Styling &amp; Care</a>
+        <a href="experience.html#help">Shipping &amp; Returns</a>
+        <a href="experience.html#help">Shopping Guide</a>
+      </div>
+
+      <div>
+        <h4>Stay in the loop</h4>
+        <p>Style notes, Boston edits, and seasonal drops.</p>
+        <form class="newsletter" novalidate>
+          <input type="email" placeholder="Email address" required aria-label="Newsletter email">
+          <button type="submit">Join</button>
+        </form>
+        <div class="newsletter-message" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Harbor & Thread. All rights reserved.</span>
+      <span>Boston, USA</span>
+    </div>
+  </footer>
+
+  <!-- Supabase Client & Lookbook Integration -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/email-preview.js"></script>
+  <script src="js/feedback-drawer.js"></script>
+  <script src="js/newsletter.js"></script>
+  <script src="js/lookbook.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
